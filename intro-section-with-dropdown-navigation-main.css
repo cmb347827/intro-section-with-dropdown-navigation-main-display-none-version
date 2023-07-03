@@ -12933,53 +12933,50 @@ main.container {
     color: #fafafa;
     border-radius: 10px;
     width: 200px; }
-  main.container #header {
-    height: 100%; }
-    main.container #header ul {
-      list-style-type: none; }
-    main.container #header .col:nth-of-type(1) {
-      height: 100%;
-      position: relative; }
-      main.container #header .col:nth-of-type(1) nav {
-        position: relative;
-        width: 100%; }
-        main.container #header .col:nth-of-type(1) nav .dropdown {
+  main.container #header ul {
+    list-style-type: none; }
+  main.container #header .col:nth-of-type(1) {
+    position: relative; }
+    main.container #header .col:nth-of-type(1) nav {
+      position: relative;
+      width: 100%; }
+      main.container #header .col:nth-of-type(1) nav .dropdown {
+        background-color: Snow;
+        background-color: #fafafa; }
+        main.container #header .col:nth-of-type(1) nav .dropdown .item {
+          padding-bottom: 20px; }
+        main.container #header .col:nth-of-type(1) nav .dropdown .login-btn {
+          position: relative;
           background-color: Snow;
-          background-color: #fafafa; }
-          main.container #header .col:nth-of-type(1) nav .dropdown .item {
-            padding-bottom: 20px; }
-          main.container #header .col:nth-of-type(1) nav .dropdown .login-btn {
+          background-color: #fafafa;
+          color: DarkSlateGray;
+          color: #141414;
+          top: 80px;
+          width: 100px;
+          right: 3px; }
+        main.container #header .col:nth-of-type(1) nav .dropdown .register-btn {
+          position: relative;
+          background-color: Snow;
+          background-color: #fafafa;
+          color: DarkSlateGray;
+          color: #141414;
+          top: 130px;
+          width: 100px;
+          border: 2px solid black;
+          right: 20px; }
+        @media screen and (min-width: 1440px) {
+          main.container #header .col:nth-of-type(1) nav .dropdown {
+            width: 100%;
             position: relative;
-            background-color: Snow;
-            background-color: #fafafa;
-            color: DarkSlateGray;
-            color: #141414;
-            top: 80px;
-            width: 100px;
-            right: 3px; }
-          main.container #header .col:nth-of-type(1) nav .dropdown .register-btn {
-            position: relative;
-            background-color: Snow;
-            background-color: #fafafa;
-            color: DarkSlateGray;
-            color: #141414;
-            top: 130px;
-            width: 100px;
-            border: 2px solid black;
-            right: 20px; }
-          @media screen and (min-width: 1440px) {
-            main.container #header .col:nth-of-type(1) nav .dropdown {
-              width: 100%;
-              position: relative;
-              width: 100%;
-              overflow: auto; }
-              main.container #header .col:nth-of-type(1) nav .dropdown .features-ul, main.container #header .col:nth-of-type(1) nav .dropdown .company-ul {
-                box-shadow: 5px 10px 15px #888888; }
-              main.container #header .col:nth-of-type(1) nav .dropdown .login-btn, main.container #header .col:nth-of-type(1) nav .dropdown .register-btn {
-                top: 0; } }
-    @media screen and (min-width: 1440px) {
-      main.container #header {
-        height: 200px; } }
+            width: 100%;
+            overflow: auto; }
+            main.container #header .col:nth-of-type(1) nav .dropdown .features-ul, main.container #header .col:nth-of-type(1) nav .dropdown .company-ul {
+              box-shadow: 5px 10px 15px #888888; }
+            main.container #header .col:nth-of-type(1) nav .dropdown .login-btn, main.container #header .col:nth-of-type(1) nav .dropdown .register-btn {
+              top: 0; } }
+  @media screen and (min-width: 1440px) {
+    main.container #header {
+      height: 200px; } }
   main.container .top .logo-group img {
     transform: scale(0.7, 0.7); }
   @media screen and (min-width: 1440px) {

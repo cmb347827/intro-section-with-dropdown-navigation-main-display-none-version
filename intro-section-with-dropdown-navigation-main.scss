@@ -95,13 +95,11 @@ main.container {
 	   width: 200px;
 	}
 	#header{
-	  height: 100%;
 	  ul{
 	    list-style-type:none;
 	  }
 	  //the first div within the header.
 	  .col:nth-of-type(1){
-		  height: 100%;
 		  position:relative;
 		  nav { 
 		    position:relative;
