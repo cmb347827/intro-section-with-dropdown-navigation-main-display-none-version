@@ -12921,6 +12921,11 @@ main.container {
   padding: 12px; }
   main.container #desktop {
     display: none; }
+  main.container header {
+    height: 100%; }
+    @media screen and (min-width: 1440px) {
+      main.container header {
+        height: 200px; } }
   main.container a {
     text-decoration: none;
     color: DarkSlateGray;
@@ -12933,19 +12938,20 @@ main.container {
     color: #fafafa;
     border-radius: 10px;
     width: 200px; }
-  main.container #header ul {
-    list-style-type: none; }
-  main.container #header .col:nth-of-type(1) {
+  main.container .col:nth-of-type(1) {
+    height: 100%;
     position: relative; }
-    main.container #header .col:nth-of-type(1) nav {
+    main.container .col:nth-of-type(1) nav {
       position: relative;
       width: 100%; }
-      main.container #header .col:nth-of-type(1) nav .dropdown {
+      main.container .col:nth-of-type(1) nav ul {
+        list-style-type: none; }
+      main.container .col:nth-of-type(1) nav .dropdown {
         background-color: Snow;
         background-color: #fafafa; }
-        main.container #header .col:nth-of-type(1) nav .dropdown .item {
+        main.container .col:nth-of-type(1) nav .dropdown .item {
           padding-bottom: 20px; }
-        main.container #header .col:nth-of-type(1) nav .dropdown .login-btn {
+        main.container .col:nth-of-type(1) nav .dropdown .login-btn {
           position: relative;
           background-color: Snow;
           background-color: #fafafa;
@@ -12954,7 +12960,7 @@ main.container {
           top: 80px;
           width: 100px;
           right: 3px; }
-        main.container #header .col:nth-of-type(1) nav .dropdown .register-btn {
+        main.container .col:nth-of-type(1) nav .dropdown .register-btn {
           position: relative;
           background-color: Snow;
           background-color: #fafafa;
@@ -12965,18 +12971,18 @@ main.container {
           border: 2px solid black;
           right: 20px; }
         @media screen and (min-width: 1440px) {
-          main.container #header .col:nth-of-type(1) nav .dropdown {
-            width: 100%;
+          main.container .col:nth-of-type(1) nav .dropdown {
+            height: 300px;
             position: relative;
             width: 100%;
-            overflow: auto; }
-            main.container #header .col:nth-of-type(1) nav .dropdown .features-ul, main.container #header .col:nth-of-type(1) nav .dropdown .company-ul {
+            overflow: hidden; }
+            main.container .col:nth-of-type(1) nav .dropdown .features-ul, main.container .col:nth-of-type(1) nav .dropdown .company-ul {
               box-shadow: 5px 10px 15px #888888; }
-            main.container #header .col:nth-of-type(1) nav .dropdown .login-btn, main.container #header .col:nth-of-type(1) nav .dropdown .register-btn {
+            main.container .col:nth-of-type(1) nav .dropdown .login-btn, main.container .col:nth-of-type(1) nav .dropdown .register-btn {
               top: 0; } }
-  @media screen and (min-width: 1440px) {
-    main.container #header {
-      height: 200px; } }
+      @media screen and (min-width: 1440px) {
+        main.container .col:nth-of-type(1) nav {
+          top: -50px; } }
   main.container .top .logo-group img {
     transform: scale(0.7, 0.7); }
   @media screen and (min-width: 1440px) {

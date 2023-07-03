@@ -82,7 +82,12 @@ main.container {
     #desktop{
 		display: none;
     }
-
+	header{
+	    height: 100%;
+		@media screen and (min-width: $container__form-xxl * 1px){
+		   height: 200px;
+		}
+	}
 	a{
 	   text-decoration:none;
 	   @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
@@ -94,16 +99,20 @@ main.container {
 	   @include border-radius(10px);
 	   width: 200px;
 	}
-	#header{
-	  ul{
-	    list-style-type:none;
-	  }
+	
+	  
 	  //the first div within the header.
 	  .col:nth-of-type(1){
+	      height: 100%;
 		  position:relative;
+		  
 		  nav { 
+		    ul{
+			  list-style-type:none;
+			}
 		    position:relative;
 			width: 100%;
+			
 		    .dropdown{				
 		           //dropdown positioned absolute in js for width < 1440, parent element relative.
 		           .item{
@@ -128,26 +137,25 @@ main.container {
 					  right: 20px;
 			      }
 				  @media screen and(min-width: $container__form-xxl *1px){
-				           width: 100%;
-		                   .features-ul,.company-ul{
+				           .features-ul,.company-ul{
 						      box-shadow: 5px 10px 15px #888888;
 						   }
+						   height: 300px;
 		                   position:relative;
 		                   width: 100%;
-			               overflow: auto;
+			               overflow: hidden;
 						   .login-btn,.register-btn{
 							   top:0;
 		                   }
-		              
-		   
 		          }
 		    }
+			@media screen and(min-width: $container__form-xxl * 1px){
+			     top: -50px;
+			}
 		  }
-		}
-		@media screen and (min-width: $container__form-xxl * 1px){
-		   height: 200px;
-		}
 	}
+		
+	
 	
 	//first section under header.
 	.top{
