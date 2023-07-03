@@ -1,0 +1,228 @@
+
+@import 'custom.scss';
+
+$container__form-xs: 375;
+$container__form-xxl: 1440;
+$container__form-xxl-min: 1439;
+
+$font_size-18: 18px;
+$font_size-16: 16px;
+$font-size-8: 8px;
+$font_weight-normal: 400;
+$font_weight-bold: 700;
+
+
+$colors: (
+  Almost White: hsl(0, 0%, 98%),
+  Medium Gray: hsl(0, 0%, 41%),
+  Almost Black: hsl(0, 0%, 8%),
+);
+$fallback-colors: (
+  Snow Silver DarkSlateGray
+);
+
+@mixin background($url,$position:auto,$size:auto,$repeat:no-repeat,$fixed:fixed,$color:white){
+    background: url($url) $position/$size $repeat $fixed $color; 
+}
+@mixin font-color($color, $fallback-color) {
+  color: $fallback-color;
+  color: $color;
+}
+
+@mixin bg-color($color, $fallback-color) {
+  background-color: $fallback-color;
+  background-color: $color;
+}
+
+@mixin width($grid-size) {
+  width: $grid-size * 1px;
+}
+@mixin max-width($grid-size) {
+  max-width: $grid-size * 1px;
+}
+@mixin min-width($grid-size) {
+  min-width: $grid-size * 1px;
+}
+@mixin border-radius($radius...) {
+  border-radius: $radius;
+}
+@mixin margin($args...) {
+  margin: $args;
+}
+@mixin padding($args...) {
+  padding: $args;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  
+  font-weight: $font_weight-normal;
+  
+}
+
+
+main.container {
+    @include width($container__form-xs);
+    display:grid;
+	height: 100vh;
+	margin-top: 100px;
+	place-contents:center;
+	
+    
+    #desktop{
+		display: none;
+    }
+
+	a{
+	   text-decoration:none;
+	   @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+	}
+	.btn-primary{
+	   border:none;
+	   @include bg-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+	   @include font-color(map-get($colors,Almost White), nth($fallback-colors, 1));
+	   @include border-radius(10px);
+	   width: 200px;
+	}
+	#header{
+	  height: 100%;
+	  ul{
+	    list-style-type:none;
+	  }
+	  //the first div within the header.
+	  .col:nth-of-type(1){
+		  height: 100%;
+		  position:relative;
+		  nav { 
+		    position:relative;
+			width: 100%;
+		    .dropdown{				
+		           //dropdown positioned absolute in js for width < 1440, parent element relative.
+		           .item{
+			          padding-bottom: 20px;
+			       }
+				   @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1)); 
+				   .login-btn{
+			          position:relative;
+					  @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1));
+					  @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+			          top: 80px;
+				      width: 100px;
+					  right: 3px;
+			       }
+			      .register-btn{
+			          position:relative;
+					  @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1));
+					  @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+			          top: 130px;
+				      width:100px;
+					  border: 2px solid black;
+					  right: 20px;
+			      }
+				  @media screen and(min-width: $container__form-xxl *1px){
+				           width: 100%;
+		                   .features-ul,.company-ul{
+						      box-shadow: 5px 10px 15px #888888;
+						   }
+		                   position:relative;
+		                   width: 100%;
+			               overflow: auto;
+						   .login-btn,.register-btn{
+							   top:0;
+		                   }
+		              
+		   
+		          }
+		    }
+		  }
+		}
+		@media screen and (min-width: $container__form-xxl * 1px){
+		   height: 200px;
+		}
+	}
+	
+	//first section under header.
+	.top{
+		    .logo-group img{
+			    transform: scale(0.7,0.7);
+	        }
+		    @media screen and (min-width: $container__form-xxl * 1px){
+		        .logo-group{
+				   overflow: auto;
+			       width: 100%;
+		           img{
+			         
+			       }
+		        }
+		    }
+	}
+	
+	
+	//within main
+    
+	@include padding(12px);
+			
+	.dropdown,.close,.features-close,.company-close,.company-ul,.features-ul{
+	    display:none;
+    }
+	.item{
+	    position:relative;
+		top: 50px;
+	}
+    .toggle{
+		display: block;
+		position:relative;
+		z-index:2;
+		top: -10px;
+		left: 54%;
+		width: 50px;
+    }
+    #mobile{
+		display:block;
+	    width: 100%;
+	}
+			
+    
+    @media screen and (min-width: $container__form-xxl * 1px) {
+	   
+       @include width($container__form-xxl);
+	   @include padding(150px);
+	   
+	   .dropdown{
+		  display:flex;
+	   }
+	   .toggle{
+		  display: none;
+	   }
+	   //re-use code from 'base-appearal-coming-soon-master' project
+	   #mobile{
+		   display:none;
+       }
+	   #desktop{
+		   display: block;
+		   width: 100%;
+		   height: 80vh;
+	   }
+    }
+  
+}
+
+footer {
+  .attribution {
+    font-size: $font_size-8;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
