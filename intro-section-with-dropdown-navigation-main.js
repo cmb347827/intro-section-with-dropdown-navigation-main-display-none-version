@@ -18,6 +18,7 @@ const openToggle = function(){
        if(width < 1440){
 			  ++toggleCounter;
 			  if(toggleCounter % 2 ){
+				  $('.toggle').attr('aria-expanded',"true");
 				  //counter is odd.
 				  //menu is collapsed. Hide the hamburger ,show the close image, and open the menu
 				  $('.hamburger').hide();
@@ -25,7 +26,7 @@ const openToggle = function(){
 				  $('main').css({'background-color':colors['Overlay'],'opacity':'0.5'});
 				  //changed the position, width, and height here from other 'project-tracking-intro-component-master' project code.
 			      $('.dropdown').css({'background':colors['Almost White'],'display':'block','position':'absolute','top':'-10px','left':'1%','z-index':'1','height':'100vh','width':'300px','text-align':'center'});  
-				  $('.dropdown').attr({'aria-expanded':'true','aria-hidden':'false'});
+				  $('.dropdown').attr({'aria-hidden':'false'});
 				  $('.item').hover(function(){
 					  $(this).css('background-color',colors["Lighter Gray"]);
 				  });
@@ -34,6 +35,7 @@ const openToggle = function(){
 				  });
 				  
 			  } else{
+				  $('.toggle').attr('aria-expanded',"false");
 				  //with even click menu will be closed
 				  $('main').css({'background-color':colors['Almost White'],'opacity':'1'});
 				  $('.close').css('display','none').hide();
@@ -41,7 +43,7 @@ const openToggle = function(){
 			      $('.hamburger').show();
 				  if(width < 1440){
 			         $('.dropdown').css('display','none').hide();
-					 $('.dropdown').attr({'aria-expanded':'false','aria-hidden':'true'});
+					 $('.dropdown').attr({'aria-hidden':'true'});
 				  }
 			  }
         }
@@ -56,15 +58,17 @@ const openFeatures = function(){
 	
 	++featureToggle;
 	if(featureToggle % 2 ){
+		$('.features-link').attr('aria-expanded',"true");
 		$('.features-close').css('visibility','visible').show('slow');
 		$('.features-open').css('visibility','hidden').hide();
 		$('.features-ul').css({'display':'block','border-radius':'10px'}).show();
-		$('.features-ul').attr({'aria-expanded':'true','aria-hidden':'false'});
+		$('.features-ul').attr({'aria-hidden':'false'});
 	}else {
+		$('.features-link').attr('aria-expanded',"false");
 		$('.features-close').css('visibility','hidden').hide();
 		$('.features-open').css('visibility','visible').show('slow');
 		$('.features-ul').hide();
-	    $('.features-ul').attr({'aria-expanded':'false','aria-hidden':'true'});
+	    $('.features-ul').attr({'aria-hidden':'true'});
 	}
 };
 
@@ -73,13 +77,15 @@ const openCompany = function(){
 	 
 	 ++companyToggle;
 	 if(companyToggle % 2 ){
+		$('.company-link').attr('aria-expanded',"true");
 		$('.company-close').css('visibility','visible').show('slow');
 		$('.company-open').css('visibility','hidden').hide();
 		$('.company-ul').css({'display':'block','border-radius':'10px'}).show();
-	    $('.company-ul').attr({'aria-expanded':'true','aria-hidden':'false'});
+	    $('.company-ul').attr({'aria-hidden':'false'});
      }else {
+		$('.company-link').attr('aria-expanded',"false");
 		$('.company-ul').hide();
-	    $('.company-ul').attr({'aria-expanded':'false','aria-hidden':'true'});
+	    $('.company-ul').attr({'aria-hidden':'true'});
 		$('.company-close').css('visibility','hidden').hide();
 		$('.company-open').css('visibility','visible').show('slow');
 		
