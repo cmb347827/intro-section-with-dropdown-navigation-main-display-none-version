@@ -12979,7 +12979,17 @@ main.container {
             main.container .col:nth-of-type(1) nav .dropdown .features-ul, main.container .col:nth-of-type(1) nav .dropdown .company-ul {
               box-shadow: 5px 10px 15px #888888; }
             main.container .col:nth-of-type(1) nav .dropdown .login-btn, main.container .col:nth-of-type(1) nav .dropdown .register-btn {
-              top: 0; } }
+              position: relative;
+              top: 0; }
+            main.container .col:nth-of-type(1) nav .dropdown .login-btn {
+              left: 125%; }
+            main.container .col:nth-of-type(1) nav .dropdown .register-btn {
+              left: 135%; }
+            main.container .col:nth-of-type(1) nav .dropdown .features-link, main.container .col:nth-of-type(1) nav .dropdown .company-link {
+              background: none;
+              color: inherit;
+              border: none;
+              padding: 0; } }
       @media screen and (min-width: 1440px) {
         main.container .col:nth-of-type(1) nav {
           top: -50px; } }
@@ -12998,8 +13008,8 @@ main.container {
     display: block;
     position: relative;
     z-index: 2;
-    top: -10px;
-    left: 54%;
+    top: 0;
+    left: 60%;
     width: 50px; }
   main.container #mobile {
     display: block;

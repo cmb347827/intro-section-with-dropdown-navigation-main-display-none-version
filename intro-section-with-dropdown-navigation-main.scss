@@ -145,8 +145,21 @@ main.container {
 		                   width: 100%;
 			               overflow: hidden;
 						   .login-btn,.register-btn{
+						       position:relative;
 							   top:0;
 		                   }
+						   .login-btn{
+						       left: 125%;
+						   }
+						   .register-btn{
+						       left: 135%;
+						   }
+						   .features-link,.company-link{
+						       background: none;
+	                           color: inherit;
+	                           border: none;
+	                           padding: 0;
+						   }
 		          }
 		    }
 			@media screen and(min-width: $container__form-xxl * 1px){
@@ -189,8 +202,8 @@ main.container {
 		display: block;
 		position:relative;
 		z-index:2;
-		top: -10px;
-		left: 54%;
+		top: 0;
+		left: 60%;
 		width: 50px;
     }
     #mobile{
