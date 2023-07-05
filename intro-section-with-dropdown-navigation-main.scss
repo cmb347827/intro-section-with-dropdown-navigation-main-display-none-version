@@ -93,6 +93,7 @@ main.container {
 	height: 100vh;
 	margin-top: 100px;
 	place-contents:center;
+	font-size: 1.2em;
 	
     #main-content {
 	    font-size: 2em;
@@ -156,7 +157,7 @@ main.container {
 					  @media screen and(min-width:$container__form-xxl * 1px){
 					      position:relative;
 						  top:-10px;
-						  left: 125%;
+						  left: 115%;
 						  &:active{
 						    @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
 						  }
@@ -173,7 +174,7 @@ main.container {
 					  @media screen and(min-width:$container__form-xxl * 1px){
 					      position:relative;
 						  top:-10px;
-						  left: 135%;
+						  left: 125%;
 						  &:active{
 						    @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
 							border: 2px solid hsl(0, 0%, 8%);

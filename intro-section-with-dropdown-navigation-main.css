@@ -12939,6 +12939,7 @@ main.container {
   height: 100vh;
   margin-top: 100px;
   place-contents: center;
+  font-size: 1.2em;
   padding: 12px; }
   main.container #main-content {
     font-size: 2em;
@@ -12995,7 +12996,7 @@ main.container {
               main.container #header .col:nth-of-type(1) #snap-nav .dropdown .login-btn {
                 position: relative;
                 top: -10px;
-                left: 125%; }
+                left: 115%; }
                 main.container #header .col:nth-of-type(1) #snap-nav .dropdown .login-btn:active {
                   color: DarkSlateGray;
                   color: #141414; } }
@@ -13013,7 +13014,7 @@ main.container {
               main.container #header .col:nth-of-type(1) #snap-nav .dropdown .register-btn {
                 position: relative;
                 top: -10px;
-                left: 135%; }
+                left: 125%; }
                 main.container #header .col:nth-of-type(1) #snap-nav .dropdown .register-btn:active {
                   color: DarkSlateGray;
                   color: #141414;
