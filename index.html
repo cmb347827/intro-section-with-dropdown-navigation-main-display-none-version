@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/yxgKFKLM/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
   <link rel='stylesheet' href='intro-section-with-dropdown-navigation-main.css' type='text/css'>
@@ -17,24 +20,24 @@
 				  <img aria-hidden='true' class='me-4' src='images/logo.svg' alt='Image of business name Snap logo.' width="84" height="27">
 				  
 				  
-				  <nav aria-label='Company menu' class=''>
+				  <nav id='snap-nav' aria-label='Company menu' class=''>
 				    <button aria-expanded="false" aria-label='Main menu.' class='toggle' ><img aria-hidden='true' class='me-4 close' src='images/icon-close-menu.svg' alt='' width="26" height="26"><img aria-hidden='true' class='hamburger' src='images/icon-menu.svg' alt='' width="32" height="18"></button>
 				    <ul class='dropdown'>
 					   <li class='mt-5 mt-xxl-0 ms-xxl-3 me-xxl-4 item'>
 					       <button aria-expanded="false" class=' features-link text-uppercase me-4' >Features<img aria-hidden='true' class='ms-2 features-close' src='images/icon-arrow-up.svg' alt='' width='10' height='6' ><img aria-hidden='true' class='ms-2 features-open' src='images/icon-arrow-down.svg' alt='' width="10" height="6"></button>
 					       <ul aria-hidden='true' class='features-ul'>
-                              <li><img aria-hidden='true' class=' me-1' src='images/icon-todo.svg' alt='' width="14" height="16">ToDo List</li>
-                              <li><img aria-hidden='true' class='me-1' src='images/icon-calendar.svg' alt='' width="16" height="16">Calender</li>
-                              <li><img aria-hidden='true' class='me-1' src='images/icon-reminders.svg' alt='' width="13" height="17">Reminders</li>
-						      <li><img aria-hidden='true' class='me-1' src='images/icon-planning.svg' alt='' width="16" height="16">Planning</li>
+                              <li><img aria-hidden='true' class=' me-1' src='images/icon-todo.svg' alt='' width="14" height="16"><a href='#'>ToDo List</a></li>
+                              <li><img aria-hidden='true' class='me-1' src='images/icon-calendar.svg' alt='' width="16" height="16"><a href='#'>Calender</a></li>
+                              <li><img aria-hidden='true' class='me-1' src='images/icon-reminders.svg' alt='' width="13" height="17"><a href='#'>Reminders</a></li>
+						      <li><img aria-hidden='true' class='me-1' src='images/icon-planning.svg' alt='' width="16" height="16"><a href='#'>Planning</a></li>
                            </ul>
 					    </li>
                         <li class='ms-xxl-3 me-xxl-4 item'>
 						   <button aria-expanded="false" class='company-link text-uppercase me-4' >Company<img aria-hidden='true' class='ms-2 company-close' src='images/icon-arrow-up.svg' alt='' width='10' height='6'><img aria-hidden='true' class='ms-2 company-open' src='images/icon-arrow-down.svg' alt='' width='10' height='6'></button>
 					       <ul aria-hidden='true' class='company-ul'>
-						     <li>History</li>
-						     <li>Our Team</li>
-						     <li>Blog</li>
+						     <li><a href='#'>History</a></li>
+						     <li><a href='#'>Our Team</a></li>
+						     <li><a href='#'>Blog</a></li>
 						   </ul>
 					    </li>
                         <li class='ms-xxl-3 me-xxl-4 item'><a class='text-uppercase me-4' href='#' >Careers</a></li>
@@ -49,10 +52,10 @@
 		  <div class='row p-xxl-5'>
 		        
 			    <section class='top justify-content-between col-xxl-7 d-flex flex-column '>
-				        <h1> Make remote work </h1>
+				        <h1 id='h1'> Make remote work </h1>
                         <p>  Get your team in sync, no matter your location. Streamline processes, 
                        create team rituals, and watch productivity soar.</p>
-                        <button class='mb-3 btn btn-primary'>Learn more</button>
+                        <button class='more mb-3 btn btn-primary'>Learn more</button>
 					 
 					  <figure class='mt-4 d-flex logo-group' role='group'>
 				           <img class='pt-2 pb-2 img-fluid ' src='images/client-databiz.svg' alt='Image of databiz client logo.' width="114" height="20">
@@ -71,7 +74,7 @@
 		  </div>
           <footer>
 	            <div class="attribution mt-5">
-                  <span class='me-2'>Challenge by</span><a class='me-2' href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+                  <span class='me-2'>Challenge by</span><a class='me-2' href="https://www.frontendmentor.io?ref=challenge" >Frontend Mentor</a> 
                   <span class='me-2'>Coded by</span><a href="https://www.frontendmentor.io/profile/cmb347827">CMB</a>
                 </div>
 	      </footer>		  

@@ -5,10 +5,9 @@ $container__form-xs: 375;
 $container__form-xxl: 1440;
 $container__form-xxl-min: 1439;
 
+$font_size-8:8px;
 $font_size-18: 18px;
-$font_size-16: 16px;
-$font-size-8: 8px;
-$font_weight-normal: 400;
+$font_weight-semibold: 500;
 $font_weight-bold: 700;
 
 
@@ -65,9 +64,10 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  
+  font-family: 'Epilogue', sans-serif;
+  font-size: $font_size-18;
   font-weight: $font_weight-normal;
-  
+  @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
 }
 
 
@@ -78,16 +78,17 @@ main.container {
 	margin-top: 100px;
 	place-contents:center;
 	
-    
+    #h1 {
+	    font-size: 2em;
+		font-weight: $font_weight-bold;
+		@media screen and (min-width: $container__form-xxl * 1px){
+		   font-size: 4.3em;
+		}
+	}
     #desktop{
 		display: none;
     }
-	header{
-	    height: 100%;
-		@media screen and (min-width: $container__form-xxl * 1px){
-		   height: 200px;
-		}
-	}
+	
 	a{
 	   text-decoration:none;
 	   @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
@@ -98,22 +99,32 @@ main.container {
 	   @include font-color(map-get($colors,Almost White), nth($fallback-colors, 1));
 	   @include border-radius(10px);
 	   width: 200px;
+	   height: 40px;
 	}
 	
 	  
+	  
+	#header{
+	  height: 100%;
 	  //the first div within the header.
 	  .col:nth-of-type(1){
 	      height: 100%;
 		  position:relative;
 		  
-		  nav { 
+		  #snap-nav { 
 		    ul{
 			  list-style-type:none;
 			}
 		    position:relative;
 			width: 100%;
 			
-		    .dropdown{				
+		    .dropdown{	
+			       a,.features-link,.company-link{
+                      @include font-color(map-get($colors, Medium Gray), nth($fallback-colors, 2));		
+                      &:active{
+					    @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+				      }
+                   }				   
 		           //dropdown positioned absolute in js for width < 1440, parent element relative.
 		           .item{
 			          padding-bottom: 20px;
@@ -122,19 +133,36 @@ main.container {
 				   .login-btn{
 			          position:relative;
 					  @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1));
-					  @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
-			          top: 80px;
+					  @include font-color(map-get($colors, Medium Gray), nth($fallback-colors, 2));
+					  top: 80px;
 				      width: 100px;
 					  right: 3px;
+					  @media screen and(min-width:$container__form-xxl * 1px){
+					      position:relative;
+						  top:-10px;
+						  left: 125%;
+						  &:active{
+						    @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+						  }
+					  }
 			       }
 			      .register-btn{
 			          position:relative;
 					  @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1));
-					  @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+					  @include font-color(map-get($colors, Medium Gray), nth($fallback-colors, 2));
 			          top: 130px;
 				      width:100px;
 					  border: 2px solid black;
 					  right: 20px;
+					  @media screen and(min-width:$container__form-xxl * 1px){
+					      position:relative;
+						  top:-10px;
+						  left: 135%;
+						  &:active{
+						    @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+							border: 2px solid hsl(0, 0%, 8%);
+						  }
+					  }
 			      }
 				  @media screen and(min-width: $container__form-xxl *1px){
 				           .features-ul,.company-ul{
@@ -144,19 +172,9 @@ main.container {
 		                   position:relative;
 		                   width: 100%;
 			               overflow: hidden;
-						   .login-btn,.register-btn{
-						       position:relative;
-							   top:0;
-		                   }
-						   .login-btn{
-						       left: 125%;
-						   }
-						   .register-btn{
-						       left: 135%;
-						   }
+						  
 						   .features-link,.company-link{
 						       background: none;
-	                           color: inherit;
 	                           border: none;
 	                           padding: 0;
 						   }
@@ -166,23 +184,40 @@ main.container {
 			     top: -50px;
 			}
 		  }
-	}
-		
+	  }
+	  @media screen and (min-width: $container__form-xxl * 1px){
+		   height: 200px;
+	  }
+	}	
 	
 	
 	//first section under header.
 	.top{
+	        
 		    .logo-group img{
 			    transform: scale(0.7,0.7);
 	        }
+			&:not(figure){
+			    display: flex;
+                align-items: center;
+                justify-content: center;
+				
+			}
 		    @media screen and (min-width: $container__form-xxl * 1px){
 		        .logo-group{
 				   overflow: auto;
 			       width: 100%;
-		           img{
-			         
-			       }
 		        }
+				&:not(figure){
+				   display:flex;
+				   align-items:flex-start;
+				   justify-content:flex-start;
+				}
+				.more:active{
+				   @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1));
+				   @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+				   border: 2px solid black;
+				}
 		    }
 	}
 	
@@ -203,7 +238,7 @@ main.container {
 		position:relative;
 		z-index:2;
 		top: 0;
-		left: 60%;
+		left: 75%;
 		width: 50px;
     }
     #mobile{
