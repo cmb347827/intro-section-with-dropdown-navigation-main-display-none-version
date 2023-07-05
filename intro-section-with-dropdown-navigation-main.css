@@ -12916,6 +12916,23 @@ body {
   color: DarkSlateGray;
   color: #141414; }
 
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto; }
+  .screenreader-text:focus {
+    background-color: Snow;
+    background-color: #fafafa;
+    color: DarkSlateGray;
+    color: #141414;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    margin: auto; }
+
 main.container {
   width: 375px;
   display: grid;
@@ -12923,11 +12940,11 @@ main.container {
   margin-top: 100px;
   place-contents: center;
   padding: 12px; }
-  main.container #h1 {
+  main.container #main-content {
     font-size: 2em;
     font-weight: 700; }
     @media screen and (min-width: 1440px) {
-      main.container #h1 {
+      main.container #main-content {
         font-size: 4.3em; } }
   main.container #desktop {
     display: none; }
