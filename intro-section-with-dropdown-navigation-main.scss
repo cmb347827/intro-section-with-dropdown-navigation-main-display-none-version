@@ -69,7 +69,23 @@ body {
   font-weight: $font_weight-normal;
   @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
 }
+.screenreader-text{
+    position: absolute;
+    left: -999px;
+    width:1px;
+    height: 1px;
+    top: auto;
 
+    &:focus {
+	  @include bg-color(map-get($colors, Almost White), nth($fallback-colors, 1));
+      @include font-color(map-get($colors, Almost Black), nth($fallback-colors, 3));
+      display: inline-block;
+      height: auto;
+      width: auto;
+      position: static;
+      margin: auto;
+  }
+}
 
 main.container {
     @include width($container__form-xs);
@@ -78,7 +94,7 @@ main.container {
 	margin-top: 100px;
 	place-contents:center;
 	
-    #h1 {
+    #main-content {
 	    font-size: 2em;
 		font-weight: $font_weight-bold;
 		@media screen and (min-width: $container__form-xxl * 1px){
